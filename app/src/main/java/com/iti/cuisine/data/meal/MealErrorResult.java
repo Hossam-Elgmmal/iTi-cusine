@@ -9,6 +9,7 @@ import java.io.IOException;
 import java.net.SocketTimeoutException;
 import java.net.UnknownHostException;
 import java.util.NoSuchElementException;
+import java.util.concurrent.TimeoutException;
 
 import retrofit2.HttpException;
 
@@ -32,7 +33,7 @@ public enum MealErrorResult {
     public static MealErrorResult fromThrowable(Throwable error) {
         if (error instanceof UnknownHostException) {
             return NO_INTERNET;
-        } else if (error instanceof SocketTimeoutException) {
+        } else if (error instanceof SocketTimeoutException || error instanceof TimeoutException) {
             return TIMEOUT;
         }
         else if (error instanceof HttpException) {

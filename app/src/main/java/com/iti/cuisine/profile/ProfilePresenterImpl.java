@@ -9,11 +9,14 @@ import com.iti.cuisine.Constants;
 import com.iti.cuisine.R;
 import com.iti.cuisine.data.auth.AuthRepo;
 import com.iti.cuisine.data.auth.AuthRepoImpl;
+import com.iti.cuisine.data.meal.MealErrorResult;
 import com.iti.cuisine.data.meal.MealRepo;
 import com.iti.cuisine.data.meal.MealRepoImpl;
 import com.iti.cuisine.data.user.UserData;
 import com.iti.cuisine.data.user.UserRepo;
 import com.iti.cuisine.data.user.UserRepoImpl;
+
+import java.util.concurrent.TimeUnit;
 
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers;
 import io.reactivex.rxjava3.core.Single;
@@ -129,6 +132,7 @@ public class ProfilePresenterImpl implements ProfilePresenter {
                 )
                 .subscribeOn(Schedulers.io())
                 .doOnSubscribe(disposable -> showLoading.onNext(true))
+                .timeout(5000, TimeUnit.MILLISECONDS)
                 .doFinally(() -> showLoading.onNext(false))
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(
@@ -137,7 +141,11 @@ public class ProfilePresenterImpl implements ProfilePresenter {
                                 view.showMessage(R.string.data_uploaded_successfully);
                             }
                         },
-                        e -> Log.e(Constants.TAG, "uploadData: ", e)
+                        e -> {
+                            if (view != null) {
+                                view.showMessage(MealErrorResult.fromThrowable(e).getMessageId());
+                            }
+                        }
                 );
         disposables.add(uploadDisposable);
     }
