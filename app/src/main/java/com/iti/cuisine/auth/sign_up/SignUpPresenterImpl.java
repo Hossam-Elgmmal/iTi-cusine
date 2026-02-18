@@ -121,7 +121,9 @@ public class SignUpPresenterImpl implements SignUpPresenter {
 
     @Override
     public void destroy() {
-        authHandler.destroy();
-        authHandler = null;
+        if (authHandler != null) {
+            authHandler.destroy();
+            authHandler = null;
+        }
     }
 }

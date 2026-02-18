@@ -3,25 +3,20 @@
     <string name="welcome_back">Welcome Back</string>
     <string name="fuel_your_day_with_a_perfectly_planned_meal">Fuel Your day with a perfectly planned meal</string>
     <string name="email">Email</string>
-    <string name="enter_email">Enter email</string>
     <string name="password">Password</string>
-    <string name="enter_password">Enter Password</string>
     <string name="log_in">Log in</string>
     <string name="don_t_have_an_account">Don’t have an account?</string>
     <string name="register_now">Register Now!</string>
-    <string name="forgot_password">Forgot Password?</string>
     <string name="or">Or</string>
     <string name="continue_with_google">Continue with Google</string>
     <string name="continue_as_a_guest">Continue as a guest</string>
     <string name="create_account">Create Account</string>
     <string name="join_the_meal_planning_journey">Join the meal planning journey</string>
     <string name="username">Username</string>
-    <string name="enter_username">Enter username</string>
     <string name="username_must_be_at_least_3_characters">Username must be at least 3 characters</string>
     <string name="password_must_be_at_least_8_characters">Password must be at least 8 characters and include one uppercase letter, one lowercase letter, and one number.</string>
     <string name="confirm_password">Confirm Password</string>
     <string name="passwords_must_match">Passwords must match</string>
-    <string name="re_enter_password">Re-enter password</string>
     <string name="already_have_an_account">Already have an account?</string>
     <string name="log_in_now">Log in Now!</string>
     <string name="email_must_be_valid">Email must be valid</string>
@@ -43,7 +38,6 @@
     <string name="google_sign_in_failed">⚠️ Google sign-in failed</string>
     <string name="google_sign_in_was_cancelled">⚠️ Google sign-in was cancelled</string>
     <string name="google_play_services_is_not_available">⚠️ Google Play Services is not available</string>
-    <string name="no_account_found_with_this_email">⚠️ No account found with this email</string>
     <string name="this_account_has_been_disabled">⚠️ This account has been disabled</string>
     <string name="this_google_account_is_already_linked_to_another_user">⚠️ This Google account is already linked to another user</string>
     <string name="sign_out">Sign Out</string>
@@ -72,7 +66,6 @@
     <string name="breakfast">Breakfast</string>
     <string name="lunch">Lunch</string>
     <string name="dinner">Dinner</string>
-    <string name="snack">Snack</string>
     <string name="meal_added_to_plan">🎉 Meal Added successfully</string>
     <string name="save">Save</string>
     <string name="cancel">Cancel</string>
@@ -103,4 +96,5 @@
     <string name="you_re_in_guest_mode_sign_in_to_save_your_favorites_and_meal_plans">You\'re in guest mode. Sign in to save your favorites and meal plans</string>
     <string name="data_uploaded_successfully">Data uploaded successfully</string>
     <string name="dialog_icon">Dialog Icon</string>
+    <string name="logo">Logo</string>
 </resources>

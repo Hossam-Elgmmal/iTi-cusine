@@ -38,15 +38,15 @@
     </style>
 
     <style name="TextAppearance.Cuisine.TitleLarge" parent="TextAppearance.Material3.TitleLarge">
-        <item name="fontFamily">@font/nunito_semibold</item>
+        <item name="fontFamily">@font/nunito_bold</item>
     </style>
 
     <style name="TextAppearance.Cuisine.TitleMedium" parent="TextAppearance.Material3.TitleMedium">
-        <item name="fontFamily">@font/nunito_semibold</item>
+        <item name="fontFamily">@font/nunito_bold</item>
     </style>
 
     <style name="TextAppearance.Cuisine.TitleSmall" parent="TextAppearance.Material3.TitleSmall">
-        <item name="fontFamily">@font/nunito_semibold</item>
+        <item name="fontFamily">@font/nunito_bold</item>
     </style>
 
     <style name="TextAppearance.Cuisine.BodyLarge" parent="TextAppearance.Material3.BodyLarge">

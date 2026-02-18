@@ -99,7 +99,9 @@ public class LoginPresenterImpl implements LoginPresenter {
 
     @Override
     public void destroy() {
-        authHandler.destroy();
-        authHandler = null;
+        if (authHandler != null) {
+            authHandler.destroy();
+            authHandler = null;
+        }
     }
 }
