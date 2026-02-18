@@ -13,13 +13,23 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:clipChildren="false"
-        android:clipToPadding="false"
-        android:padding="16dp">
+        android:clipToPadding="false">
 
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/ic_wood"
+            android:scaleType="centerCrop"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/type_image"
             android:layout_width="wrap_content"
             android:layout_height="100dp"
+            android:layout_marginTop="8dp"
             android:adjustViewBounds="true"
             android:scaleType="fitCenter"
             app:layout_constraintEnd_toEndOf="parent"
@@ -30,12 +40,12 @@
 
         <TextView
             android:id="@+id/type_title"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="8dp"
             android:ellipsize="end"
             android:gravity="center"
-            android:layout_marginTop="8dp"
+            android:layout_marginVertical="8dp"
             android:maxLines="1"
             android:minLines="1"
             android:textAppearance="@style/TextAppearance.Cuisine.TitleMedium"

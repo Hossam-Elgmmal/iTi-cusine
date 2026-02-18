@@ -180,18 +180,24 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent">
 
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/ic_wood"
+                            android:scaleType="centerCrop"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            />
+
                         <com.google.android.material.imageview.ShapeableImageView
                             android:id="@+id/first_ingredient_image"
                             android:layout_width="120dp"
                             android:layout_height="120dp"
                             android:layout_marginTop="16dp"
-                            android:background="@color/md_theme_surface"
-                            android:elevation="4dp"
                             android:scaleType="centerCrop"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
-                            app:shapeAppearanceOverlay="@style/CircleImage"
                             tools:src="@drawable/ic_loading_placeholder" />
 
                         <TextView
@@ -226,18 +232,24 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent">
 
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/ic_wood"
+                            android:scaleType="centerCrop"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            />
+
                         <com.google.android.material.imageview.ShapeableImageView
                             android:id="@+id/second_ingredient_image"
                             android:layout_width="120dp"
                             android:layout_height="120dp"
                             android:layout_marginTop="16dp"
-                            android:background="@color/md_theme_surface"
-                            android:elevation="4dp"
                             android:scaleType="centerCrop"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
-                            app:shapeAppearanceOverlay="@style/CircleImage"
                             tools:src="@drawable/ic_loading_placeholder" />
 
                         <TextView
