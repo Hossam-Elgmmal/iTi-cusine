@@ -158,7 +158,7 @@
                 android:id="@+id/calendar_card"
                 style="@style/Widget.Material3.CardView.Elevated"
                 android:layout_width="0dp"
-                android:layout_height="180dp"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="8dp"
                 app:layout_constraintEnd_toStartOf="@id/favorite_card"
@@ -172,8 +172,8 @@
 
                     <com.google.android.material.imageview.ShapeableImageView
                         android:id="@+id/calendar_image"
-                        android:layout_width="120dp"
-                        android:layout_height="120dp"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
                         android:layout_marginTop="16dp"
                         android:scaleType="fitCenter"
                         android:src="@drawable/ic_calendar_filled"
@@ -204,7 +204,7 @@
                 android:id="@+id/favorite_card"
                 style="@style/Widget.Material3.CardView.Elevated"
                 android:layout_width="0dp"
-                android:layout_height="180dp"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 app:layout_constraintBottom_toBottomOf="@id/calendar_card"
                 app:layout_constraintEnd_toEndOf="@id/right_guideline"
@@ -217,8 +217,8 @@
 
                     <com.google.android.material.imageview.ShapeableImageView
                         android:id="@+id/favorite_image"
-                        android:layout_width="120dp"
-                        android:layout_height="120dp"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
                         android:layout_marginTop="16dp"
                         android:scaleType="fitCenter"
                         android:src="@drawable/ic_favorites_filled"
