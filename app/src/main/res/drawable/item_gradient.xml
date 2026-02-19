@@ -17,6 +17,17 @@
                 android:type="radial"
                 android:startColor="@color/md_theme_tertiaryContainer"
                 android:endColor="#00000000"
+                android:centerX="0"
+                android:centerY="0.9"
+                android:gradientRadius="80dp" />
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:type="radial"
+                android:startColor="@color/md_theme_tertiaryContainer"
+                android:endColor="#00000000"
                 android:centerX="1"
                 android:centerY="1"
                 android:gradientRadius="80dp" />
