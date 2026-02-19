@@ -3,6 +3,7 @@ package com.iti.cuisine.utils.glide;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
+import android.view.View;
 import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
@@ -97,6 +98,34 @@ public class GlideManager {
                     public void onLoadFailed(@Nullable Drawable errorDrawable) {
                         chip.setChipIconResource(R.drawable.logo);
 
+                        onLoadFinished();
+                    }
+                }));
+    }
+
+    public static void loadIntoAndShowBackground(String url, ImageView imageView, View backgroundView) {
+        enqueue(() -> Glide.with(imageView)
+                .asBitmap()
+                .load(url)
+                .centerCrop()
+                .error(R.drawable.img_error_placeholder)
+                .into(new CustomTarget<Bitmap>() {
+                    @Override
+                    public void onResourceReady(@NonNull Bitmap resource,
+                                                @Nullable Transition<? super Bitmap> transition) {
+                        imageView.setImageBitmap(resource);
+                        backgroundView.setVisibility(View.VISIBLE);
+                        onLoadFinished();
+                    }
+
+                    @Override
+                    public void onLoadCleared(@Nullable Drawable placeholder) {
+                        onLoadFinished();
+                    }
+
+                    @Override
+                    public void onLoadFailed(@Nullable Drawable errorDrawable) {
+                        imageView.setImageDrawable(errorDrawable);
                         onLoadFinished();
                     }
                 }));

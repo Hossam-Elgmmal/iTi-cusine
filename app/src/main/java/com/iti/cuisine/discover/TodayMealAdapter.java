@@ -69,11 +69,13 @@ public class TodayMealAdapter extends RecyclerView.Adapter<TodayMealAdapter.Toda
         private final TextView titleTextView;
         private final Chip countryChip;
         private final View itemView;
+        private final View backgroundView;
 
         public TodayMealViewHolder(@NonNull View itemView) {
             super(itemView);
             this.itemView = itemView;
             imageView = itemView.findViewById(R.id.meal_image);
+            backgroundView = itemView.findViewById(R.id.backgroundView);
             titleTextView = itemView.findViewById(R.id.meal_title);
             countryChip = itemView.findViewById(R.id.meal_country_chip);
         }
@@ -85,7 +87,7 @@ public class TodayMealAdapter extends RecyclerView.Adapter<TodayMealAdapter.Toda
             itemView.setOnClickListener(v -> onItemClick.accept(mealEntity.getId()));
             countryChip.setOnClickListener(v -> onCountryClick.accept(mealEntity.getCountry(), mealEntity.getCountryFlagUrl()));
 
-            GlideManager.loadInto(mealEntity.getThumbnail(), imageView);
+            GlideManager.loadIntoAndShowBackground(mealEntity.getThumbnail(), imageView, backgroundView);
             GlideManager.loadImageIntoChip(mealEntity.getCountryFlagUrl(), countryChip);
         }
     }

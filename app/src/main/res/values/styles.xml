@@ -8,4 +8,9 @@
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">15%</item>
     </style>
+    <style name="RightCircleImage">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopRight">15%</item>
+        <item name="cornerSizeBottomRight">15%</item>
+    </style>
 </resources>
